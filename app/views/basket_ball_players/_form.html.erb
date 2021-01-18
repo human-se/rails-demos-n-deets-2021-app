@@ -1,0 +1,42 @@
+<%= form_with(model: basket_ball_player) do |form| %>
+  <% if basket_ball_player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(basket_ball_player.errors.count, "error") %> prohibited this basket_ball_player from being saved:</h2>
+
+      <ul>
+        <% basket_ball_player.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height_inches %>
+    <%= form.number_field :height_inches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight_lbs %>
+    <%= form.number_field :weight_lbs %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

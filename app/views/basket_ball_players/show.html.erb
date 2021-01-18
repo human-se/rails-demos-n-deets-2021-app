@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @basket_ball_player.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @basket_ball_player.last_name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @basket_ball_player.position %>
+</p>
+
+<p>
+  <strong>Height inches:</strong>
+  <%= @basket_ball_player.height_inches %>
+</p>
+
+<p>
+  <strong>Weight lbs:</strong>
+  <%= @basket_ball_player.weight_lbs %>
+</p>
+
+<%= link_to 'Edit', edit_basket_ball_player_path(@basket_ball_player) %> |
+<%= link_to 'Back', basket_ball_players_path %>

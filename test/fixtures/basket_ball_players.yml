@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: basket_ball_players
+#
+#  id            :bigint           not null, primary key
+#  first_name    :string
+#  height_inches :integer
+#  last_name     :string
+#  position      :string
+#  weight_lbs    :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  first_name: MyString
+  last_name: MyString
+  position: MyString
+  height_inches: 1
+  weight_lbs: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  position: MyString
+  height_inches: 1
+  weight_lbs: 1
