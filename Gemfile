@@ -54,3 +54,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Disconnects all connections to PostgreSQL db when running rails db:reset
+gem 'pgreset'
+
+group :development do
+  gem 'annotate'
+end
+
+# Replaces Rails form helpers with bootstrap-specific form helpers
+gem "bootstrap_form", "~> 4.0"
