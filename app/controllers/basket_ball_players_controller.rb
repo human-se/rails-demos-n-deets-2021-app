@@ -28,7 +28,7 @@ class BasketBallPlayersController < ApplicationController
 
     respond_to do |format|
       if @basket_ball_player.save
-        format.html { redirect_to @basket_ball_player, notice: 'Basket ball player was successfully created.' }
+        format.html { redirect_to basket_ball_players_url, notice: 'Basket ball player was successfully created.' }
         format.json { render :show, status: :created, location: @basket_ball_player }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class BasketBallPlayersController < ApplicationController
   def update
     respond_to do |format|
       if @basket_ball_player.update(basket_ball_player_params)
-        format.html { redirect_to @basket_ball_player, notice: 'Basket ball player was successfully updated.' }
+        format.html { redirect_to basket_ball_players_url, notice: 'Basket ball player was successfully updated.' }
         format.json { render :show, status: :ok, location: @basket_ball_player }
       else
         format.html { render :edit }

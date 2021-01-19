@@ -1,16 +1,20 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div id="notice" class="alert alert-success" role="alert" style="color: white">
+    <%= notice %>
+  </div>
+<% end %>
 
-<h1>Basket Ball Players</h1>
+<h1>Team Roster</h1>
 
-<table>
-  <thead>
+<table class="table table-striped" style="max-width: 48rem;">
+  <thead class="thead-dark">
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
       <th>Position</th>
-      <th>Height inches</th>
-      <th>Weight lbs</th>
-      <th colspan="3"></th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -20,11 +24,12 @@
         <td><%= basket_ball_player.first_name %></td>
         <td><%= basket_ball_player.last_name %></td>
         <td><%= basket_ball_player.position %></td>
-        <td><%= basket_ball_player.height_inches %></td>
-        <td><%= basket_ball_player.weight_lbs %></td>
-        <td><%= link_to 'Show', basket_ball_player %></td>
-        <td><%= link_to 'Edit', edit_basket_ball_player_path(basket_ball_player) %></td>
-        <td><%= link_to 'Destroy', basket_ball_player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= basket_ball_player.height_inches/12 %>' <%= basket_ball_player.height_inches%12 %>'</td>
+        <td><%= basket_ball_player.weight_lbs %> lbs.</td>
+        <td>
+          <%= link_to '🖊', edit_basket_ball_player_path(basket_ball_player) %>
+          <%= link_to '🗑', basket_ball_player, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Basket Ball Player', new_basket_ball_player_path %>
+<%= link_to 'New Basket Ball Player', new_basket_ball_player_path, class: 'btn btn-primary' %>
