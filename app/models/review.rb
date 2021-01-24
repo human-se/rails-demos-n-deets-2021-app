@@ -14,4 +14,7 @@
 #  updated_at   :datetime         not null
 #
 class Review < ApplicationRecord
+
+  validates :genre, inclusion: { in: ['Action', 'Science Fiction', 'Drama', 'Horror', 'Comedy', 'Musical'] }
+  
 end
