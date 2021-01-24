@@ -22,4 +22,10 @@ class ReviewTest < ActiveSupport::TestCase
     assert review_one.valid?, review_one.errors.full_messages.inspect
   end
 
+  test "review_date must be after release_date" do
+    review_one = reviews(:one)
+    review_one.review_date = Date.new(1998, 3, 31)
+    assert_not review_one.valid?
+  end
+
 end
