@@ -22,4 +22,10 @@ class ReviewTest < ActiveSupport::TestCase
     assert review_one.valid?, review_one.errors.full_messages.inspect
   end
 
+  test "genre must be from approved list" do
+    review_one = reviews(:one)
+    review_one.genre = 'Romance'
+    assert_not review_one.valid?
+  end
+
 end
