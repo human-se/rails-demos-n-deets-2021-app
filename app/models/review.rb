@@ -14,4 +14,11 @@
 #  updated_at   :datetime         not null
 #
 class Review < ApplicationRecord
+
+  validate :review_date_must_be_after_release_date
+
+  def review_date_must_be_after_release_date
+    errors.add(:review_date, "must come after release date") unless review_date.after?(release_date)
+  end
+  
 end
