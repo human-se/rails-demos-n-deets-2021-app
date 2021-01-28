@@ -11,11 +11,11 @@
 #
 
 one:
-  title: MyString
-  description: MyText
-  due_date: 2021-01-23
+  title: Slay the Dragon
+  description: Go to the End and slay the Enderdragon.
+  due_date: 2020-5-5
 
 two:
-  title: MyString
-  description: MyText
-  due_date: 2021-01-23
+  title: Do Homework
+  description: Mrs. Dempsey says I have to do all my homework or she'll fail me.
+  due_date: 2009-4-17
