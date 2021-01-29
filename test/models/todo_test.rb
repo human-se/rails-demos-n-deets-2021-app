@@ -14,7 +14,9 @@ require "test_helper"
 class TodoTest < ActiveSupport::TestCase
 
   test "fixtures are valid" do
-
+    todos.each do |todo|
+      
+    end
   end
   
 end
