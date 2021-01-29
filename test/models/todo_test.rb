@@ -15,7 +15,7 @@ class TodoTest < ActiveSupport::TestCase
 
   test "fixtures are valid" do
     todos.each do |todo|
-      
+      assert todo.valid?, todo.errors.full_messages.inspect
     end
   end
   
