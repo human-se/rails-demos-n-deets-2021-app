@@ -16,7 +16,9 @@
 require "test_helper"
 
 class ReviewTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "all fixtures should be valid" do
+    
+  end
+
 end
