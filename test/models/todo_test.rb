@@ -12,7 +12,9 @@
 require "test_helper"
 
 class TodoTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "fixtures are valid" do
+
+  end
+  
 end
