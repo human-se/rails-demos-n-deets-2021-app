@@ -15,19 +15,10 @@
 #
 
 one:
-  body: MyText
-  genre: MyString
-  link: MyString
-  release_date: 2021-01-29
-  review_date: 2021-01-29
-  score: 9.99
-  title: MyString
-
-two:
-  body: MyText
-  genre: MyString
-  link: MyString
-  release_date: 2021-01-29
-  review_date: 2021-01-29
-  score: 9.99
-  title: MyString
+  title: The Matrix
+  score: 9.7
+  body: I love the Matrix so much that I saw it eight times in theaters and had plastic surgery to look like Keanu Reeves. Now everyone asks if I'm Keanu. My life is actually kind of sad.
+  genre: Science Fiction
+  link: https://www.imdb.com/title/tt0133093/
+  release_date: 1999-03-31
+  review_date: 2020-12-02
