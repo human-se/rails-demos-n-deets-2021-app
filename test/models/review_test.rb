@@ -22,4 +22,10 @@ class ReviewTest < ActiveSupport::TestCase
     assert review_one.valid?, review_one.errors.full_messages.inspect
   end
 
+  test "title must be present" do
+    review_one = reviews(:one)
+    review_one.title = ''
+    assert_not review_one.valid?
+  end
+
 end
