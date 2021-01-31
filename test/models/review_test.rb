@@ -22,4 +22,10 @@ class ReviewTest < ActiveSupport::TestCase
     assert review_one.valid?, review_one.errors.full_messages.inspect
   end
 
+  test "body should be longer than 50 characters" do
+    review_one = reviews(:one)
+    review_one.body = '1 2 3 4 5'
+    assert_not review_one.valid?
+  end
+
 end
