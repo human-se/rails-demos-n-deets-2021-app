@@ -14,4 +14,7 @@
 #  updated_at   :datetime         not null
 #
 class Review < ApplicationRecord
+
+  validates :score, numericality: true
+
 end
