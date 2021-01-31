@@ -22,4 +22,10 @@ class ReviewTest < ActiveSupport::TestCase
     assert review_one.valid?, review_one.errors.full_messages.inspect
   end
 
+  test "score should be a number" do
+    r = reviews(:one)
+    r.score = 'b'
+    assert_not r.valid?, r.errors.full_messages.inspect
+  end
+
 end
