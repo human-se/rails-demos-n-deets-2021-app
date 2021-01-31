@@ -14,4 +14,7 @@
 #  updated_at   :datetime         not null
 #
 class Review < ApplicationRecord
+
+  validates :body, length: { minimum: 50 }
+
 end
