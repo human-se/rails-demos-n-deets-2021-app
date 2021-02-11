@@ -10,4 +10,9 @@ class TodosController < ApplicationController
     render :show
   end
 
+  def new
+    @todo = Todo.new
+    render :new
+  end
+
 end
