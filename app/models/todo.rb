@@ -10,4 +10,8 @@
 #  updated_at  :datetime         not null
 #
 class Todo < ApplicationRecord
+
+  validates :title, presence: true
+  validates :due_date, presence: true
+
 end
