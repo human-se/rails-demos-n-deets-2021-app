@@ -15,4 +15,15 @@ class TodosController < ApplicationController
     render :new
   end
 
+  def create
+    @todo = Todo.new(params.require(:todo).permit(:title, :description, :due_date))
+    if @todo.save
+      flash[:success] = "New to-do item successfully added!"
+      redirect_to todos_url
+    else
+      flash.now[:error] = "To-do item creation failed"
+      render :new
+    end
+  end
+
 end
