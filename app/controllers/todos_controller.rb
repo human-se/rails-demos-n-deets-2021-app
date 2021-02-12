@@ -10,4 +10,11 @@ class TodosController < ApplicationController
     render :show
   end
 
+  def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy
+    flash[:success] = "The to-do item was successfully destroyed."
+    redirect_to todos_url
+  end
+
 end
