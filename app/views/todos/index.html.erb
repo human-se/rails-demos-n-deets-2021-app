@@ -6,6 +6,7 @@
     <tr>
       <th>Title</th>
       <th>Due Date</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -14,6 +15,7 @@
       <tr>
         <td><%= link_to todo.title, todo_path(todo) %></td>
         <td><%= todo.due_date.strftime("%m/%d/%Y") %></td>
+        <td><%= link_to "Delete", todo_path(todo), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
    </tbody>
