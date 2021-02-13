@@ -10,4 +10,9 @@ class TodosController < ApplicationController
     render :show
   end
 
+  def edit
+    @todo = Todo.find(params[:id])
+    render :edit
+  end
+
 end
