@@ -15,4 +15,15 @@ class TodosController < ApplicationController
     render :edit
   end
 
+  def update
+    @todo = Todo.find(params[:id])
+    if @todo.update(params.require(:todo).permit(:title, :description, :due_date))
+      flash[:success] = "To-do item successfully updated!"
+      redirect_to todo_url(@todo)      
+    else
+      flash.now[:error] = "To-do item update failed"
+      render :edit
+    end
+  end
+
 end
