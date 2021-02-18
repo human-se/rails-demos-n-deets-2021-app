@@ -1,0 +1,14 @@
+# == Schema Information
+#
+# Table name: quizzes
+#
+#  id          :bigint           not null, primary key
+#  description :text
+#  title       :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  title: Software Engineering Principles
+  description: Basic concepts of software engineering and design
