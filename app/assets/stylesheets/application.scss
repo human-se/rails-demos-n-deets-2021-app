@@ -15,6 +15,10 @@
  */
 
 @import "rails_bootstrap_forms";
-@import "bootswatch/dist/yeti/variables";
+@import "bootswatch/dist/journal/variables";
 @import "bootstrap/scss/bootstrap";
-@import "bootswatch/dist/yeti/bootswatch";
+@import "bootswatch/dist/journal/bootswatch";
+
+.alert-dismissible {
+  padding-left: $close-font-size + $alert-padding-x * 2;
+}

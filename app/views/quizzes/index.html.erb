@@ -1,0 +1,31 @@
+<h1>Quizzes</h1>
+
+<table class="table table-striped table-hover">
+
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizzes.each do |quiz| %>
+      <tr>
+        <td><%= quiz.title %></td>
+        <td><%= quiz.description %></td>
+        <td class="text-nowrap">
+          <%= link_to 'show', quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
+          <%= link_to 'edit', edit_quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
+          <%= link_to 'destroy', quiz_path(quiz), method: :delete, class: 'btn btn-outline-secondary btn-sm' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<p>
+  <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-secondary" %>
+</p>
