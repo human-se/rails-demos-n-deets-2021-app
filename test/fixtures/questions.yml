@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: questions
+#
+#  id           :bigint           not null, primary key
+#  answer       :string
+#  distractor_1 :string
+#  distractor_2 :string
+#  question     :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+one:
+  question: What is the HTTP request method to retrieve a resource?
+  answer: Get
+  distractor_1: Git
+  distractor_2: Retrieve
+
+two:
+  question: What software engineering methodology relies on iterative development over multiple sprints?
+  answer: Agile
+  distractor_1: Waterfall
+  distractor_2: Invest
