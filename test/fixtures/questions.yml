@@ -25,9 +25,11 @@ one:
   answer: Get
   distractor_1: Git
   distractor_2: Retrieve
+  quiz: one
 
 two:
   question: What software engineering methodology relies on iterative development over multiple sprints?
   answer: Agile
   distractor_1: Waterfall
   distractor_2: Invest
+  quiz: one
