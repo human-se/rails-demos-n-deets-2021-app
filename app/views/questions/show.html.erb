@@ -1,0 +1,17 @@
+<h1><%= @question.question %></h1>
+
+<ul>
+  <li class="text-success">
+    <%= @question.answer %>
+  </li>
+  <li class="text-danger">
+    <%= @question.distractor_1 %>
+  </li>
+  <li class="text-danger">
+    <%= @question.distractor_2 %>
+  </li>
+</ul>
+
+<p>
+  <%= link_to 'Back to Questions', quiz_questions_path(@quiz), class: 'btn btn-outline-secondary' %>
+</p>
