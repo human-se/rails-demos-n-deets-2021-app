@@ -1,10 +1,3 @@
 <h1>Edit To-Do Item</h1>
 
-<%= bootstrap_form_with model: @todo, url: todo_path(@todo), method: :patch, local: true do |f| %>
-
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
-  <%= f.date_field :due_date %>
-  <%= f.submit %>
-
-<% end %>
+<%= render "form" %>
