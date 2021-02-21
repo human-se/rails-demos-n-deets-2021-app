@@ -16,6 +16,7 @@
         <td class="text-nowrap">
           <%= link_to 'show', quiz_question_path(@quiz, question), class: 'btn btn-outline-secondary btn-sm' %>
           <%= link_to 'edit', edit_quiz_question_path(@quiz, question), class: 'btn btn-outline-secondary btn-sm' %>
+          <%= link_to 'destroy', quiz_question_path(@quiz, question), method: :delete, class: 'btn btn-outline-secondary btn-sm' %>
         </td>
       </tr>
     <% end %>

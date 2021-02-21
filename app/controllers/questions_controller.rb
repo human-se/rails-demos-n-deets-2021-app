@@ -48,4 +48,12 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @quiz = Quiz.find(params[:quiz_id])
+    @question = @quiz.questions.find(params[:id])
+    @question.destroy
+    flash[:success] = "Question deleted successfully"
+    redirect_to quiz_questions_url(@quiz)
+  end
+
 end
