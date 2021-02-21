@@ -30,4 +30,22 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def edit
+    @quiz = Quiz.find(params[:quiz_id])
+    @question = @quiz.questions.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @quiz = Quiz.find(params[:quiz_id])
+    @question = @quiz.questions.find(params[:id])
+    if @question.update(params.require(:question).permit(:question, :answer, :distractor_1, :distractor_2))
+      flash[:success] = "Question updated successfully"
+      redirect_to quiz_question_url(@quiz, @question)
+    else
+      flash.now[:error] = "Question could not be updated"
+      render :edit
+    end
+  end
+
 end
