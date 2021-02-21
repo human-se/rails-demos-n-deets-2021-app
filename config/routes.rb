@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'quizzes/:id/edit', to: 'quizzes#edit', as: 'edit_quiz'
 
   get 'quizzes/:quiz_id/questions', to: 'questions#index', as: 'quiz_questions'
+  post 'quizzes/:quiz_id/questions', to: 'questions#create'
+  get 'quizzes/:quiz_id/questions/new', to: 'questions#new', as: 'new_quiz_question'
   get '/quizzes/:quiz_id/questions/:id', to: 'questions#show', as: 'quiz_question'
 
 end
