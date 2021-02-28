@@ -17,7 +17,7 @@ class QuizzesController < ApplicationController
   end
 
   def create
-    @quiz = Quiz.new(params.require(:quiz).permit(:title, :description))
+    @quiz = current_user.quizzes.build(params.require(:quiz).permit(:title, :description))
     if @quiz.save
       flash[:success] = "New quiz successfully created!"
       redirect_to quizzes_url

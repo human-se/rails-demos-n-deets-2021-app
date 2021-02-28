@@ -6,6 +6,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Author</th>
       <th></th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <tr>
         <td><%= quiz.title %></td>
         <td><%= quiz.description %></td>
+        <td><%= quiz.creator.email%></td>
         <td class="text-nowrap">
           <%= link_to 'show', quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
           <%= link_to 'edit', edit_quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
