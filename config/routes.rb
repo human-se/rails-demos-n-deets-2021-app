@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root to: redirect('/quizzes')
   
   get 'quizzes', to: 'quizzes#index', as: 'quizzes'
