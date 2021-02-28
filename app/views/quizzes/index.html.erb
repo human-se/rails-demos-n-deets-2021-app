@@ -19,8 +19,10 @@
         <td><%= quiz.creator.email%></td>
         <td class="text-nowrap">
           <%= link_to 'show', quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
-          <%= link_to 'edit', edit_quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
-          <%= link_to 'destroy', quiz_path(quiz), method: :delete, class: 'btn btn-outline-secondary btn-sm' %>
+          <% if quiz.creator == current_user %>
+            <%= link_to 'edit', edit_quiz_path(quiz), class: 'btn btn-outline-secondary btn-sm' %>
+            <%= link_to 'destroy', quiz_path(quiz), method: :delete, class: 'btn btn-outline-secondary btn-sm' %>
+          <% end %>
         </td>
       </tr>
     <% end %>
