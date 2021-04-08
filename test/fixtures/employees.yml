@@ -1,0 +1,17 @@
+# == Schema Information
+#
+# Table name: employees
+#
+#  id         :bigint           not null, primary key
+#  dob        :date
+#  empid      :string
+#  fname      :string
+#  lname      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+one:
+  fname: Richie
+  lname: Rich
+  dob: Date.new('1980-06-22')
+  empid: 123456

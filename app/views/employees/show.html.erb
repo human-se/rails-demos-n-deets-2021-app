@@ -1,0 +1,27 @@
+<p>
+  <strong>First Name:</strong>
+  <%= @employee.fname %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @employee.lname %>
+</p>
+
+<p>
+  <strong>Date of Birth:</strong>
+  <%= @employee.dob %>
+</p>
+
+<p>
+  <strong>Employee ID:</strong>
+  <%= @employee.empid %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_employee_path(@employee), class: 'btn btn-primary' %>
+</p>
+
+<p>
+  <%= link_to 'Back', employees_path, class: 'btn btn-sm btn-outline-secondary' %>
+</p>

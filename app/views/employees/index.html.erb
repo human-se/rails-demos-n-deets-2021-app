@@ -1,0 +1,33 @@
+<h1>Employees</h1>
+
+<table class="table table-hover">
+
+  <thead class="table-secondary">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date of Birth</th>
+      <th>Employee ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.fname %></td>
+        <td><%= employee.lname %></td>
+        <td><%= employee.dob %></td>
+        <td><%= employee.empid %></td>
+        <td><%= link_to 'Show', employee, class: 'btn btn-sm btn-outline-secondary' %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee), class: 'btn btn-sm btn-outline-secondary' %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, class: 'btn btn-sm btn-outline-secondary', data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<p>
+  <%= link_to 'New Employee', new_employee_path, class: 'btn btn-primary' %>
+</p>

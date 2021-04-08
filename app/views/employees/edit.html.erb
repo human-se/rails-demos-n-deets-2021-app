@@ -1,0 +1,15 @@
+<h1>Editing Employee</h1>
+
+<%= bootstrap_form_with(model: @employee, url: employee_path(@employee), method: :patch, local: true) do |form| %>
+
+  <%= form.text_field :fname, label: "First Name" %>
+  <%= form.text_field :lname, label: "Last Name" %>
+  <%= form.date_select :dob, label: "Date of Birth" %>
+  <%= form.text_field :empid, label: "Employee ID" %>
+  <%= form.submit class: 'btn btn-primary' %>
+
+<% end %>
+
+<p class="mt-3">
+  <%= link_to 'Back', employees_path, class: 'btn btn-sm btn-outline-secondary' %>
+</p>

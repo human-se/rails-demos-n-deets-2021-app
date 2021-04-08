@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-primary' %>
+</p>
+
+<p>
+  <%= link_to 'Back', projects_path, class: 'btn btn-sm btn-outline-secondary' %>
+</p>
