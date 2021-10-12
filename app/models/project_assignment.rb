@@ -19,6 +19,19 @@
 #  fk_rails_...  (project_id => projects.id)
 #
 class ProjectAssignment < ApplicationRecord
-  belongs_to :employee
-  belongs_to :project
+
+  belongs_to(
+    :employee,
+    class_name: 'Employee',
+    foreign_key: 'employee_id',
+    inverse_of: :project_assignments
+  )
+  
+  belongs_to(
+    :project,
+    class_name: 'Project',
+    foreign_key: 'project_id',
+    inverse_of: :project_assignments
+  )
+
 end

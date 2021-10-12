@@ -10,6 +10,15 @@
 #
 class Project < ApplicationRecord
 
+  has_many(
+    :project_assignments,
+    class_name: 'ProjectAssignment',
+    foreign_key: 'project_id',
+    inverse_of: :project,
+    dependent: :destroy
+  )
+  has_many :employees, through: :project_assignments
+  
   validates :title, presence: true
 
 end
