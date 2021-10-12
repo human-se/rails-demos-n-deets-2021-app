@@ -20,7 +20,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
       post projects_url, params: { project: { description: @project.description, title: @project.title } }
     end
 
-    assert_redirected_to project_url(Project.last)
+    assert_redirected_to projects_url
   end
 
   test "should show project" do

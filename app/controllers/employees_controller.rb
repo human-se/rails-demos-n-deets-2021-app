@@ -23,7 +23,7 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(params.require(:employee).permit(:fname, :lname, :dob, :empid))
     if @employee.save
-      flash[:success] = "New employee succesfully created!"
+      flash[:success] = "New employee successfully created!"
       redirect_to employees_url  
     else
       flash.now[:error] = "New employee failed to be created."

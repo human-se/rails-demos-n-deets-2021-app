@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params.require(:project).permit(:title, :description))
     if @project.save
-      flash[:success] = "New project succesfully created!"
+      flash[:success] = "New project successfully created!"
       redirect_to projects_url  
     else
       flash.now[:error] = "New project failed to be created."

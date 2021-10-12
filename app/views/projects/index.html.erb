@@ -6,7 +6,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -15,9 +15,11 @@
       <tr>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
-        <td><%= link_to 'Show', project, class: 'btn btn-sm btn-outline-secondary' %></td>
-        <td><%= link_to 'Edit', edit_project_path(project), class: 'btn btn-sm btn-outline-secondary' %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-secondary' %></td>
+        <td class="text-nowrap">
+          <%= link_to 'Show', project, class: 'btn btn-sm btn-outline-secondary' %>
+          <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-sm btn-outline-secondary' %>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-secondary' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
