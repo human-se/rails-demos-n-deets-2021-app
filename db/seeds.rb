@@ -86,3 +86,9 @@ project3 = Project.create!(
   title: "Macrosoft Phrase",
   description: "Macrosoft wants to break into the profitable world of 'word processing', and they've hired us to help them do it."
 )
+
+# Project Assignments
+
+project1.employees << [employee1, employee2, employee3, employee4]
+project2.employees << [employee3, employee4, employee5, employee6, employee7, employee8, employee9]
+project3.employees << [employee7, employee8, employee9, employee10]
