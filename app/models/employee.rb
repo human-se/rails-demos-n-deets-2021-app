@@ -25,4 +25,8 @@ class Employee < ApplicationRecord
   validates :empid, format: { with: /\A\d{6}\z/ }
   validates :empid, uniqueness: true
 
+  def full_name
+    "#{fname} #{lname}"
+  end
+
 end
