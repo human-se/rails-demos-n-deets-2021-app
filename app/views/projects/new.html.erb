@@ -4,6 +4,7 @@
 
   <%= form.text_field :title %>
   <%= form.text_area :description %>
+  <%= form.collection_check_boxes :employee_ids, Employee.all, :id, :full_name, { hide_label: true } %>
   <%= form.submit class: 'btn btn-primary' %>
   
 <% end %>
