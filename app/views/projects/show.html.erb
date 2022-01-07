@@ -10,6 +10,16 @@
   <%= @project.description %>
 </p>
 
+<p class="mb-0">
+  <strong>Employees:</strong>
+</p>
+
+<ul>
+  <% @project.employees.each do |employee| %>
+    <li><%= employee.full_name %></li>
+  <% end %>
+</ul>
+
 <p>
   <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-primary' %>
 </p>

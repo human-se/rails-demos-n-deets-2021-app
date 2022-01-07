@@ -20,6 +20,16 @@
   <%= @employee.empid %>
 </p>
 
+<p class="mb-0">
+  <strong>Projects:</strong>
+</p>
+
+<ul>
+  <% @employee.projects.each do |project| %>
+    <li><%= project.title %></li>
+  <% end %>
+</ul>
+
 <p>
   <%= link_to 'Edit', edit_employee_path(@employee), class: 'btn btn-primary' %>
 </p>
